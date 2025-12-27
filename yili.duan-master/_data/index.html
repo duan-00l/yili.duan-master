@@ -3,11 +3,172 @@
 <head>
   <meta charset="UTF-8">
   <title>我的主页</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
 </head>
 <body>
 
-  <h1>你好，我是段伊俐</h1>
-  <p>这是我的个人主页。</p>
+  <h1>Yili Duan</h1>
+
+  <img src="photo1.jpg" width="200">
+<p class="hint">（Click on the Chinese text to view the English translation.）</p>
+
+<div class="text-block">
+  <p class="cn">这是我的个人主页。</p>
+  <p class="en hidden">This is my personal website.</p>
+</div>
+
+<h2>随笔</h2>
+
+
+
+<div class="memo">
+  <div class="memo-date">2025.01.04</div>
+
+  <p class="memo-preview cn">
+    有时候我会觉得，网页和笔记本一样，
+    更像一个暂时停放思考的地方。
+  </p>
+
+  <div class="memo-full hidden">
+    <p class="cn">
+      它不需要完整，也不需要被理解，
+      只是暂时存在。
+    </p>
+
+    <p class="en hidden">
+      Sometimes I feel that a website is like a notebook,
+      a place where thoughts are temporarily parked.
+    </p>
+  </div>
+
+  <div class="memo-toggle">展开</div>
+</div>
+
+
+<h2>Travel</h2>
+
+<p class="hint">点击地图上的地点，查看我的旅行记录。</p>
+
+<div id="map"></div>
+
+<script>
+  const map = L.map('map').setView([51.505, -0.09], 4);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  const marker = L.marker([48.8566, 2.3522]).addTo(map);
+  marker.bindPopup(`
+    <strong>Paris</strong><br>
+    <img src="paris.jpg" width="200">
+  `);
+</script>
+
+
+<script>
+  document.querySelectorAll('.memo-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const full = btn.previousElementSibling;
+      full.classList.toggle('hidden');
+      btn.textContent = full.classList.contains('hidden') ? '展开' : '收起';
+    });
+  });
+</script>
+
+<script>
+  document.querySelectorAll('.cn').forEach(cn => {
+    cn.addEventListener('click', () => {
+      const en = cn.nextElementSibling;
+      if (en) {
+        en.classList.toggle('hidden');
+      }
+    });
+  });
+</script>
 
 </body>
+
 </html>
+
+<style>
+  .cn {
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  .en {
+    font-size: 14px;
+    color: #666;
+    margin-top: 6px;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .essay {
+  margin-bottom: 32px;
+}
+
+.date {
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 8px;
+}
+
+body {
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 0 20px;
+  line-height: 1.8;
+}
+
+h1, h2 {
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+.hint {
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 24px;
+}
+
+.memo {
+  background: #f7f7f7;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+}
+
+.memo-date {
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 8px;
+}
+
+.memo-preview {
+  font-size: 16px;
+}
+
+.memo-toggle {
+  font-size: 12px;
+  color: #666;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+#map {
+  width: 100%;
+  height: 400px;
+  margin: 40px 0;
+  border-radius: 8px;
+}
+
+</style>
+
+
+
