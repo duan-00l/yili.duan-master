@@ -19,27 +19,63 @@
   <p class="en hidden">This is my personal website.</p>
 </div>
 
-<h2>随笔</h2>
+<section id="updates">
+  <h2>近况 · Updates</h2>
+
+  <div class="update">
+    <p class="date">2025 · 近期</p>
+    <p class="cn">最近在搭建自己的个人网站，慢慢整理随笔和旅行记录。</p>
+    <p class="en">Recently building my personal website and organising my notes and travel memories.</p>
+  </div>
+
+</section>
 
 
+<h2>随笔 · Informal Essay</h2>
 
 <div class="memo">
-  <div class="memo-date">2025.01.04</div>
+  <div class="memo-date">2025.12.27</div>
 
+  <!-- 标题：单独一行 -->
+  <div class="memo-title cn">
+    关于母语和词语
+  </div>
+
+  <!-- 正文预览 -->
   <p class="memo-preview cn">
-    有时候我会觉得，网页和笔记本一样，
-    更像一个暂时停放思考的地方。
+    "你是这样年轻，一切都在开始，亲爱的先生，我要尽我的所能请求你，对于你心里一切的疑难要多多忍耐，要去爱这些“问题的本身”，像是爱一间锁闭了的房屋，或是一本用别种文字写成的书。
   </p>
 
+  <!-- 展开后的完整正文 -->
   <div class="memo-full hidden">
     <p class="cn">
-      它不需要完整，也不需要被理解，
-      只是暂时存在。
-    </p>
+     现在你不要去追求那些你还不能得到的答案，因为你还不能在生活里体验到它们。一切都要亲身生活。现在你就在这些问题里“生活”吧。--引自  里尔克《给青年诗人的十封信》第四封信（你是这样年轻，一切都在开始）
 
-    <p class="en hidden">
-      Sometimes I feel that a website is like a notebook,
-      a place where thoughts are temporarily parked.
+这句话中最打动我的字眼是，爱让你疑惑的问题本生，就像是一种用别样文字写成的书。彼时我正挣扎于英语能力测试的种种，今日我依然为寻找那些别种文字的合适表达而苦思冥想。有些字眼轻而易举的在我脑中替换，但大多数情况下，我的母语强势的占据在那个位置上。
+我长久以来都认为我没有信心再去学好一门语言，因为即使是接触了十几年的英语，依然让我感受到了与母语者之间厚厚的墙。在使用母语时，我的大脑能最快的抵达问题的核心，而不是思考我的发音是否蹩脚；在使用母语时，我的反复衡量用词的轻重，而不是担心错误的语法是否造成的语义的颠倒。
+
+我曾看到一个观点说，属于小语种的人更应该用自己的母语写作，以此来获得自信，并诱发别人的了解。大多数情况下，中文（或者谁华语）称不上的小语种，但我自始至终偏爱这个语言。这是一种信息熵几乎爆炸的语言，四个字就能说清一个故事，有些词简练且严肃，有些词晃眼但易碎。
+
+但我仍然认为词语的使用需要斟酌的。
+
+“在语言是奢侈、是观念、是欺瞒的时代，被语言左右、用语言
+支撑的人物就在这里，而且是在强制劳动营。小说中的青年把自已秘
+密的恋爱说成“密会”，用那么“特别、肮脏、羞耻、美丽”的词语。
+至于为什么不是诗，而是小说，如果你把小说从头读到尾，也就知道了。
+你会看到，在执着吞噬肉体和精神的痛苦中，因为被摸太多而变得破
+旧的词语，像美丽却不能吃的热带鱼一样残忍地发光，摆着尾巴逃跑。
+被语言纠缠，和语言斗争，和语言共生的人们，他们的样子多么不简单，
+而借助语言竭力解释的青年，声音更是震耳欲聋。
+我突然想起一个场面，挂在悬崖尽头的人艰难地抓住一根树
+枝…..语、语言，或者文学，到底能做什么呢?”
+
+最好的学习语言的方式，绝对是把自己置于该处的文化环境中，用眼睛看；
+
+然而，我认为，有一种对知识的追求与语言无关，而是建立在视觉传达的基础之上，它需要视觉思维的发展，并依赖于对语言的最原始和最深层的感知。
+*本文节选自斯坦。布拉哈格《视觉隐喻》(Metaphors on Vision)中的"视觉隐喻"(Metaphors onVieion)."
+
+用耳朵听，留心记住并且伺机使用。 否则美丽的词语永远是困在心底的幻影，找不到一个闪耀的时刻。
+
     </p>
   </div>
 
@@ -47,14 +83,17 @@
 </div>
 
 
-<h2>Travel</h2>
+
+
+<h2>旅行瞬间 · Travel</h2>
 
 <p class="hint">点击地图上的地点，查看我的旅行记录。</p>
 
 <div id="map"></div>
 
 <script>
-  const map = L.map('map').setView([51.505, -0.09], 4);
+// Paris
+const map = L.map('map').setView([51.505, -0.09], 4);
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; OpenStreetMap contributors'
@@ -63,8 +102,32 @@
   const marker = L.marker([48.8566, 2.3522]).addTo(map);
   marker.bindPopup(`
     <strong>Paris</strong><br>
-    <img src="images/paris.jpg" width="200">
+    <img src="images/paris/1.jpg" width="200"><br> 
+
+  <small> </small>
   `);
+ // Tokyo
+const tokyo = L.marker([35.6762, 139.6503]).addTo(map);
+tokyo.bindPopup(`
+  <strong>东京 · Tokyo</strong><br>
+  <img src="images/tokyo/1.jpg" width="200"><br>
+  <img src="images/tokyo/2.jpg" width="200"><br>
+  <img src="images/tokyo/3.jpg" width="200"><br>
+  <small> </small>
+`);
+
+const london = L.marker([51.5074, -0.1278]).addTo(map);
+london.bindPopup(`
+  <img src="images/london/1.jpg" width="200"><br>
+  <img src="images/london/2.jpg" width="200"><br>
+  <img src="images/london/3.jpg" width="200">
+`);
+const urumqi = L.marker([43.8256, 87.6168]).addTo(map);
+urumqi.bindPopup(`
+  <img src="images/urumqi/1.jpg" width="200"><br>
+  <img src="images/urumqi/2.jpg" width="200">
+`);
+
 </script>
 
 
@@ -137,29 +200,70 @@ h1, h2 {
   margin-bottom: 24px;
 }
 
+/* 整条随笔像一张便签 */
 .memo {
-  background: #f7f7f7;
-  padding: 16px 20px;
-  margin-bottom: 20px;
-  border-radius: 6px;
+  background: #fdfdfb;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  padding: 16px 18px;
+  margin-bottom: 28px;
+  max-width: 620px;
 }
 
+/* 日期：小、轻 */
 .memo-date {
-  font-size: 12px;
+  font-size: 0.75em;
   color: #999;
   margin-bottom: 8px;
 }
 
+/* 预览正文（首页看到的部分） */
 .memo-preview {
-  font-size: 16px;
+  font-size: 0.95em;
+  line-height: 1.6;
+  color: #333;
 }
 
-.memo-toggle {
-  font-size: 12px;
-  color: #666;
-  margin-top: 8px;
-  cursor: pointer;
+/* 预览里的“第一行”，当作标题感 */
+.memo-preview::first-line {
+  font-weight: 600;
+  color: #222;
 }
+
+/* 展开后的完整内容 */
+.memo-full {
+  margin-top: 12px;
+}
+
+/* 展开后的正文 */
+.memo-full p {
+  font-size: 0.95em;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+/* 如果你想让某些句子“像引用” */
+.memo-full p {
+  border-left: 3px solid #ddd;
+  padding-left: 12px;
+  color: #666;
+  font-style: italic;
+}
+
+/* 展开 / 收起按钮 */
+.memo-toggle {
+  margin-top: 10px;
+  font-size: 0.8em;
+  color: #666;
+  cursor: pointer;
+  user-select: none;
+}
+
+.memo-toggle:hover {
+  color: #000;
+}
+
 
 #map {
   width: 100%;
