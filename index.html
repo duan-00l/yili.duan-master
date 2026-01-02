@@ -1,308 +1,201 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>我的主页</title>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <title>Yili Duan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.7;
+      color: #1a1a1a;
+      background-color: #fafafa;
+    }
+
+    header, section {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 64px 24px;
+    }
+
+    header {
+      padding-top: 96px;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 500;
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-top: 40px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      max-width: 720px;
+      margin-bottom: 16px;
+    }
+
+    .meta {
+      font-size: 0.95rem;
+      color: #666;
+      margin-bottom: 32px;
+    }
+
+    footer {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 64px 24px;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+    }
+  </style>
 </head>
+
 <body>
 
-  <h1>Yili Duan</h1>
+  <!-- 1. POSITION / HOW TO READ THIS SITE -->
+  <header>
+    <h1>Yili Duan</h1>
 
- <img src="images/photo1.jpg" alt="我的照片" width="200">
-<p class="hint">（Click on the Chinese text to view the English translation.）</p>
-
-<div class="text-block">
-  <p class="cn">这是我的个人主页。</p>
-  <p class="en hidden">This is my personal website.</p>
-</div>
-
-<section id="updates">
-  <h2>近况 · Updates</h2>
-
-  <div class="update">
-    <p class="date">2025 · 近期</p>
-    <p class="cn">最近在搭建自己的个人网站，慢慢整理随笔和旅行记录。</p>
-    <p class="en">Recently building my personal website and organising my notes and travel memories.</p>
-  </div>
-
-</section>
-
-
-<h2>随笔 · Informal Essay</h2>
-
-<div class="memo">
-  <div class="memo-date">2025.12.27</div>
-
-  <!-- 标题：单独一行 -->
-  <div class="memo-title cn">
-    关于母语和词语
-  </div>
-
-  <!-- 正文预览 -->
-  <p class="memo-preview cn">
-    "你是这样年轻，一切都在开始，亲爱的先生，我要尽我的所能请求你，对于你心里一切的疑难要多多忍耐，要去爱这些“问题的本身”，像是爱一间锁闭了的房屋，或是一本用别种文字写成的书。
-  </p>
-
-  <!-- 展开后的完整正文 -->
-  <div class="memo-full hidden">
-    <p class="cn">
-     现在你不要去追求那些你还不能得到的答案，因为你还不能在生活里体验到它们。一切都要亲身生活。现在你就在这些问题里“生活”吧。--引自  里尔克《给青年诗人的十封信》第四封信（你是这样年轻，一切都在开始）
-
-这句话中最打动我的字眼是，爱让你疑惑的问题本生，就像是一种用别样文字写成的书。彼时我正挣扎于英语能力测试的种种，今日我依然为寻找那些别种文字的合适表达而苦思冥想。有些字眼轻而易举的在我脑中替换，但大多数情况下，我的母语强势的占据在那个位置上。
-我长久以来都认为我没有信心再去学好一门语言，因为即使是接触了十几年的英语，依然让我感受到了与母语者之间厚厚的墙。在使用母语时，我的大脑能最快的抵达问题的核心，而不是思考我的发音是否蹩脚；在使用母语时，我的反复衡量用词的轻重，而不是担心错误的语法是否造成的语义的颠倒。
-
-我曾看到一个观点说，属于小语种的人更应该用自己的母语写作，以此来获得自信，并诱发别人的了解。大多数情况下，中文（或者谁华语）称不上的小语种，但我自始至终偏爱这个语言。这是一种信息熵几乎爆炸的语言，四个字就能说清一个故事，有些词简练且严肃，有些词晃眼但易碎。
-
-但我仍然认为词语的使用需要斟酌的。
-
-“在语言是奢侈、是观念、是欺瞒的时代，被语言左右、用语言
-支撑的人物就在这里，而且是在强制劳动营。小说中的青年把自已秘
-密的恋爱说成“密会”，用那么“特别、肮脏、羞耻、美丽”的词语。
-至于为什么不是诗，而是小说，如果你把小说从头读到尾，也就知道了。
-你会看到，在执着吞噬肉体和精神的痛苦中，因为被摸太多而变得破
-旧的词语，像美丽却不能吃的热带鱼一样残忍地发光，摆着尾巴逃跑。
-被语言纠缠，和语言斗争，和语言共生的人们，他们的样子多么不简单，
-而借助语言竭力解释的青年，声音更是震耳欲聋。
-我突然想起一个场面，挂在悬崖尽头的人艰难地抓住一根树
-枝…..语、语言，或者文学，到底能做什么呢?”
-
-最好的学习语言的方式，绝对是把自己置于该处的文化环境中，用眼睛看；
-
-然而，我认为，有一种对知识的追求与语言无关，而是建立在视觉传达的基础之上，它需要视觉思维的发展，并依赖于对语言的最原始和最深层的感知。
-*本文节选自斯坦。布拉哈格《视觉隐喻》(Metaphors on Vision)中的"视觉隐喻"(Metaphors onVieion)."
-
-用耳朵听，留心记住并且伺机使用。 否则美丽的词语永远是困在心底的幻影，找不到一个闪耀的时刻。
-
+    <p class="meta">
+      Observing public culture, participation, and trust in real-world settings.
     </p>
-  </div>
 
-  <div class="memo-toggle">展开</div>
-</div>
-
-
-<div class="memo">
-  <div class="memo-date">2025.12.28</div>
-
-  <!-- 标题：单独一行 -->
-  <div class="memo-title cn">
-    关于吃 （1）
-  </div>
-
-  <!-- 正文预览 -->
-  <p class="memo-preview cn">
-    "人类生活中有五大事实：生、吃、睡、爱和死。你自然可以再增加几项——比如可以加上喘气。”<br>——摘自《小说面面观 (E.M.福斯特文集) (E.M.福斯特(E.M.Forster))》
-
-
-  <!-- 展开后的完整正文 -->
-  <div class="memo-full hidden">
-    <p class="cn">
-     今天注定是篇幅比较短小的一篇，肚子有点饿，所以没有足够的能量讨论宏大的议题，那不如就聊聊吃。
-
-吃并不那么简单，通过嘴部的咀嚼，食物要首先撑开食道，然后在肠胃中进一步的被挤压分解。每次进食，都像是食物的铁人三项和身体大集团的一次团建。
-
-围绕着吃，产生了许多谎言。人不吃饭就会死这句话的漏洞在于，人吃了饭也会死，有可能还死的更快。食品安全是一方面，每天只要睡一觉，却要吃多餐，增加了摄取有毒物质的机会。吃什么也很讲究，教义规定不能吃的；自己不愿吃的；食物摆在面前变成了敌人，变成了坏分子。
-
-食物有好有坏，也有真有假。分子料理在食物的外表和味道上做手脚。资质平平的厨子，在正宗的美食上睁着眼睛说瞎话。
-
-人一生中不知道要问自己和他人多少遍，等会儿吃什么？现在，我就陷入了这样的哲学难题。
-
+    <p>
+      This site is not a portfolio of outcomes, nor a chronological record of experiences.
+      It is a collection of field-based observations about how people,
+      responsibility, and public culture operate in practice.
     </p>
-  </div>
 
-  <div class="memo-toggle">展开</div>
-</div>
+    <p>
+      I am interested in how individuals learn, adjust, and become trusted
+      in environments that do not primarily exist to support or train them.
+    </p>
+  </header>
 
-<h2>旅行瞬间 · Travel</h2>
+  <!-- 2. FEATURED FIELDWORKS -->
+  <section>
+    <h2>Featured Fieldworks</h2>
 
-<p class="hint">点击地图上的地点，查看我的旅行记录。</p>
+    <p class="meta">
+      Selected situations where my role was temporary, but responsibility was real.
+    </p>
 
-<div id="map"></div>
+    <!-- Battle of Ideas -->
+    <h3>Battle of Ideas — Worldwrite</h3>
 
-<script>
-// Paris
-const map = L.map('map').setView([51.505, -0.09], 4);
+    <p>
+      This fieldwork confirmed that I can continue learning and functioning
+      in unfamiliar, high-intensity environments without retreating.
+    </p>
 
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap contributors'
-  }).addTo(map);
+    <p>
+      The experience was not framed as personal development.
+      Responsibility was temporarily assigned rather than carefully cultivated.
+      Trust emerged through preparation, reliability, and self-regulation.
+    </p>
 
-  const marker = L.marker([48.8566, 2.3522]).addTo(map);
-  marker.bindPopup(`
-    <strong>Paris</strong><br>
-    <img src="images/paris/1.jpg" width="200"><br> 
+    <p>
+      I observed how public cultural events rely on a large amount of invisible labour,
+      and how learning often takes place under conditions that are efficient rather than gentle.
+    </p>
 
-  <small> </small>
-  `);
- // Tokyo
-const tokyo = L.marker([35.6762, 139.6503]).addTo(map);
-tokyo.bindPopup(`
-  <strong>东京 · Tokyo</strong><br>
-  <img src="images/tokyo/1.jpg" width="200"><br>
-  <img src="images/tokyo/2.jpg" width="200"><br>
-  <img src="images/tokyo/3.jpg" width="200"><br>
-  <small> </small>
-`);
+    <!-- Hanbury Hall -->
+    <h3>Hanbury Hall — National Trust</h3>
 
-const london = L.marker([51.5074, -0.1278]).addTo(map);
-london.bindPopup(`
-  <img src="images/london/1.jpg" width="200"><br>
-  <img src="images/london/2.jpg" width="200"><br>
-  <img src="images/london/3.jpg" width="200">
-`);
-const urumqi = L.marker([43.8256, 87.6168]).addTo(map);
-urumqi.bindPopup(`
-  <img src="images/urumqi/1.jpg" width="200"><br>
-  <img src="images/urumqi/2.jpg" width="200">
-`);
+    <p>
+      In contrast, this setting required emotional attentiveness and stability,
+      particularly when working with children and families in shared public spaces.
+    </p>
 
-</script>
+    <p>
+      I learned how trust is built not through visibility or technical expertise,
+      but through making others feel safe, understood, and at ease.
+    </p>
 
+    <p>
+      These experiences shaped my understanding of responsibility
+      as something relational rather than performative.
+    </p>
+  </section>
 
-<script>
-  document.querySelectorAll('.memo-toggle').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const full = btn.previousElementSibling;
-      full.classList.toggle('hidden');
-      btn.textContent = full.classList.contains('hidden') ? '展开' : '收起';
-    });
-  });
-</script>
+  <!-- 3. HOW I WORK / HOW I OBSERVE -->
+  <section>
+    <h2>How I Observe & Learn</h2>
 
-<script>
-  document.querySelectorAll('.cn').forEach(cn => {
-    cn.addEventListener('click', () => {
-      const en = cn.nextElementSibling;
-      if (en) {
-        en.classList.toggle('hidden');
-      }
-    });
-  });
-</script>
+    <p>
+      I tend to focus less on abstract argumentation
+      and more on interaction, response, and situational dynamics.
+    </p>
+
+    <p>
+      In public discussions, I often read the room through reactions,
+      pauses, and shifts in attention rather than through complete argumentative arcs.
+    </p>
+
+    <p>
+      In unfamiliar environments, I rely on asking questions,
+      regulating my own expectations, and allowing space for error
+      without withdrawing from responsibility.
+    </p>
+  </section>
+
+  <!-- 4. MOVEMENT / TRAVEL -->
+  <section>
+    <h2>Movement & Travel</h2>
+
+    <p>
+      When travelling, I tend to remember people encountered along the way
+      and fragments of history shared informally,
+      rather than destinations or landmarks themselves.
+    </p>
+
+    <p>
+      These moments often reveal how cultural knowledge is carried
+      through everyday interactions rather than formal narratives.
+    </p>
+  </section>
+
+  <!-- 5. BACKGROUND (LOW EMPHASIS) -->
+  <section>
+    <h2>Background</h2>
+
+    <p>
+      My academic background informs how I approach observation,
+      particularly in relation to media, culture, and participation.
+    </p>
+
+    <p>
+      However, this site prioritises situated experience
+      over formal credentials or chronological progression.
+    </p>
+  </section>
+
+  <footer>
+    <p>
+      Contact: <a href="mailto:duan_001@outlook.com">duan_001@outlook.com</a>  
+      · <a href="https://www.linkedin.com/in/yili-duan-andy020427/" target="_blank">LinkedIn</a>
+    </p>
+  </footer>
 
 </body>
-
 </html>
-
-<style>
-  .cn {
-    font-size: 18px;
-    cursor: pointer;
-  }
-
-  .en {
-    font-size: 14px;
-    color: #666;
-    margin-top: 6px;
-  }
-
-  .hidden {
-    display: none;
-  }
-
-  .essay {
-  margin-bottom: 32px;
-}
-
-.date {
-  font-size: 12px;
-  color: #999;
-  margin-bottom: 8px;
-}
-
-body {
-  max-width: 700px;
-  margin: 60px auto;
-  padding: 0 20px;
-  line-height: 1.8;
-}
-
-h1, h2 {
-  font-weight: normal;
-  letter-spacing: 1px;
-}
-
-.hint {
-  font-size: 12px;
-  color: #999;
-  margin-bottom: 24px;
-}
-
-/* 整条随笔像一张便签 */
-.memo {
-  background: #fdfdfb;
-  border: 1px solid #e5e5e5;
-  border-radius: 10px;
-  padding: 16px 18px;
-  margin-bottom: 28px;
-  max-width: 620px;
-}
-
-/* 日期：小、轻 */
-.memo-date {
-  font-size: 0.75em;
-  color: #999;
-  margin-bottom: 8px;
-}
-
-/* 预览正文（首页看到的部分） */
-.memo-preview {
-  font-size: 0.95em;
-  line-height: 1.6;
-  color: #333;
-}
-
-/* 预览里的“第一行”，当作标题感 */
-.memo-preview::first-line {
-  font-weight: 600;
-  color: #222;
-}
-
-/* 展开后的完整内容 */
-.memo-full {
-  margin-top: 12px;
-}
-
-/* 展开后的正文 */
-.memo-full p {
-  font-size: 0.95em;
-  line-height: 1.7;
-  color: #444;
-  margin-bottom: 10px;
-}
-
-/* 如果你想让某些句子“像引用” */
-.memo-full p {
-  border-left: 3px solid #ddd;
-  padding-left: 12px;
-  color: #666;
-  font-style: italic;
-}
-
-/* 展开 / 收起按钮 */
-.memo-toggle {
-  margin-top: 10px;
-  font-size: 0.8em;
-  color: #666;
-  cursor: pointer;
-  user-select: none;
-}
-
-.memo-toggle:hover {
-  color: #000;
-}
-
-
-#map {
-  width: 100%;
-  height: 400px;
-  margin: 40px 0;
-  border-radius: 8px;
-}
-
-</style>
-
-
-
