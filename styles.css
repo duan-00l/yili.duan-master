@@ -1,0 +1,12 @@
+body { margin: 0; font-family: Arial, sans-serif; line-height: 1.6; }
+.container { max-width: 900px; margin: 40px auto; padding: 0 16px; }
+
+.site-header { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #eee; }
+.nav { max-width: 900px; margin: 0 auto; padding: 14px 16px; display: flex; align-items: center; justify-content: space-between; }
+.brand { text-decoration: none; font-weight: bold; color: #111; }
+
+.nav-links a { text-decoration: none; color: #333; margin-left: 14px; padding: 6px 8px; border-radius: 8px; }
+.nav-links a:hover { background: #f3f3f3; }
+.nav-links a.active { background: #111; color: #fff; }
+
+.footer { border-top: 1px solid #eee; padding: 18px 16px; text-align: center; color: #666; }
