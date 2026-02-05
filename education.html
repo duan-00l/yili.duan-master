@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
   <header class="site-header">
     <nav class="nav">
       <a class="brand" href="index.html">Yili</a>
@@ -22,12 +23,126 @@
 
   <main class="container">
     <h1>Education</h1>
-    <p>Add your education details here.</p>
+
+    <p class="lead">
+      I think of education as training for how to think and act —
+      not just a list of modules. Below are the learning environments that shaped my approach:
+      curious, responsible, and practice-oriented.
+    </p>
+
+    <!-- Education cards -->
+    <section class="grid-2">
+
+      <article class="card">
+        <h2>University of Birmingham</h2>
+        <p class="meta">MA Digital Media and Creative Industries · Sept 2024 – Sept 2025</p>
+
+        <p>
+          This year strengthened my understanding of creative industries through policy, marketing,
+          and media adaptation — and helped me translate ideas into practical outcomes.
+        </p>
+
+        <ul class="bullets">
+          <li>Focus: digital media, creative industries, and real-world cultural contexts</li>
+          <li>Training: structured thinking, clear communication, and project development</li>
+        </ul>
+
+        <p class="note">Also completed: The Birmingham Award (employability skills award).</p>
+      </article>
+
+      <article class="card">
+        <h2>Sun Yat-sen University (SYSU)</h2>
+        <p class="meta">Bachelor of Management in Tourism Management · Sept 2020 – Jun 2024</p>
+
+        <p>
+          My undergraduate study built a strong foundation in managing experiences and audiences —
+          from event planning and brand thinking to research design.
+        </p>
+
+        <ul class="bullets">
+          <li>Focus: experience design, events, branding, and research fundamentals</li>
+          <li>Habit: learning by doing — organising, observing, and improving through feedback</li>
+        </ul>
+      </article>
+
+    </section>
+
+    <!-- Publication -->
+    <section class="section">
+      <h2>Publication</h2>
+
+      <article class="card">
+        <h3>Organizational Greenwashing and Work Engagement: Evidence From the Hospitality Industry</h3>
+        <p class="meta"><em>Business Strategy and the Environment</em> · DOI: 10.1002/bse.70163</p>
+
+        <p>
+          This research examines how organisational greenwashing relates to employees’ work engagement
+          within the hospitality industry.
+        </p>
+
+        <p>
+          <strong>What I gained:</strong>
+          working on an academic publication taught me how evidence becomes an argument —
+          and how careful thinking turns into clear, decision-useful writing.
+        </p>
+
+        <p>
+          <a class="btn" href="https://doi.org/10.1002/bse.70163" target="_blank" rel="noopener noreferrer">
+            View via DOI
+          </a>
+        </p>
+      </article>
+    </section>
+
   </main>
 
   <footer class="footer">
     <p>© <span id="year"></span> Yili Duan</p>
   </footer>
-  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
 </body>
 </html>
+
+.lead { font-size: 1.05rem; color: #444; max-width: 70ch; }
+
+.section { margin-top: 28px; }
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 18px;
+}
+@media (min-width: 760px) {
+  .grid-2 { grid-template-columns: 1fr 1fr; }
+}
+
+.card {
+  border: 1px solid #eee;
+  border-radius: 16px;
+  padding: 18px;
+  background: #fff;
+}
+
+.card h2 { margin: 0 0 6px 0; }
+.card h3 { margin: 0 0 10px 0; }
+
+.meta { color: #666; margin: 0 0 12px 0; }
+.note { color: #555; margin-top: 10px; }
+
+.bullets { margin: 10px 0 0 18px; color: #333; }
+.bullets li { margin: 6px 0; }
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid #111;
+  padding: 8px 12px;
+  border-radius: 10px;
+  color: #111;
+}
+.btn:hover { background: #f3f3f3; }
